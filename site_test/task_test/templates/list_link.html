@@ -1,0 +1,19 @@
+{% extends 'base_home.html' %}
+
+{% block link_list %}
+
+<main class="container">
+    
+   
+    <div class="bg-light p-5 rounded">
+        {% for link in links %}
+        <p><a href="http://{{ip}}/{{link.slug}}"> {{ip}}/{{link.slug}}</a> -> {{link.link}}</p>
+        {% endfor %}
+        
+    </div>
+</main>
+
+{% endblock  %}
+
+
+

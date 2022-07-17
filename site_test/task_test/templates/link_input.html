@@ -1,0 +1,22 @@
+{% extends 'base_home.html' %}
+{% load static %}
+
+{% block link_input %}
+
+<main class="container">
+  
+    <div class="bg-light p-5 rounded">
+      <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сократить">
+      </form>
+    </div>
+    <div class="bg-light p-5 rounded">
+      <h5 >Текущее количество ваших коротких ссылок > {{link}}</h5>
+    </div>
+</main>
+
+{% endblock  %}
+
+
+
